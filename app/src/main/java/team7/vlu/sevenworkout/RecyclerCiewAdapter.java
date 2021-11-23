@@ -55,7 +55,7 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ListPractice.class);
                 mContext.startActivity(intent);
-                Log.d(TAG, "onClick: ");
+
             }
         });
     }
