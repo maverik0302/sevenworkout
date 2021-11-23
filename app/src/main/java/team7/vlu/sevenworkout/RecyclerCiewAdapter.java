@@ -3,6 +3,7 @@ package team7.vlu.sevenworkout;
 import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -37,9 +39,28 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        //
+        final Type type = mData.get(position);
+        if(type == null){
+            return;
+        }
+
+
         holder.txtBanner.setText(mData.get(position).getName());
         holder.imgBanner.setImageResource(mData.get(position).getPhoto());
+        //listenner
+        holder.imgBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ListPractice.class);
+                mContext.startActivity(intent);
+                Log.d(TAG, "onClick: ");
+            }
+        });
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -49,14 +70,21 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView txtBanner;
         private ImageView imgBanner;
+        LinearLayout mainLayout;
+        //khai bao cardview
+        CardView cardView;
         //stackOverflow
-        private final Context context;
+        final Context context;
         //ClickItem
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtBanner = itemView.findViewById(R.id.text_type);
             imgBanner = itemView.findViewById(R.id.imgType);
             context = itemView.getContext();
+            //findIDcardview
+            cardView = (CardView) itemView.findViewById(R.id.type_item);
+            mainLayout = (LinearLayout) itemView.findViewById(R.id.linear_item);
+
         }
 
     }

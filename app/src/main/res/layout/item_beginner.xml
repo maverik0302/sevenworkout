@@ -6,6 +6,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
     app:cardCornerRadius="8dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,31 +25,30 @@
        <LinearLayout
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
+           android:layout_gravity="center"
+           android:layout_marginStart="10dp"
            android:orientation="vertical">
            <TextView
-               android:id="@+id/idPractice"
-               android:layout_width="wrap_content"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/bt5"
-               android:padding="6dp"
-               android:textSize="16sp"
-               android:layout_marginStart="10dp"
-               android:layout_marginTop="10dp"
+               android:text="Main Title"
+               android:textColor="#000"
                android:textStyle="bold"
-               android:textColor="@color/Prussian_Blue">
-           </TextView>
+               android:layout_margin="5dp"
+               android:textSize="20sp"
+               android:id="@+id/textView1"
+               />
+
            <TextView
-           android:id="@+id/idPrep"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="time or prep"
-           android:padding="6dp"
-           android:textSize="16sp"
-           android:layout_marginStart="10dp"
-           android:layout_marginTop="10dp"
-           android:textColor="@color/Prussian_Blue">
-       </TextView>
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sub Title"
+               android:textColor="#a9a9a9"
+               android:textStyle="bold"
+               android:layout_margin="5dp"
+               android:textSize="15sp"
+               android:id="@+id/textView2"
+               />
        </LinearLayout>
     </LinearLayout>
 

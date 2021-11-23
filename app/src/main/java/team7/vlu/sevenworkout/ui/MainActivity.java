@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewpaper);
 
         //bar
+
+
     }
 
 

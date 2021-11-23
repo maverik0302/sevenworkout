@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SevenWorkout"
         android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
-        <!-- Turn off action bar -->
+        <activity
+            android:name=".ListPractice"
+            android:exported="true" /> <!-- Turn off action bar -->
         <activity android:name=".ui.MainActivity" />
         <activity
             android:name=".Splashscreen"
