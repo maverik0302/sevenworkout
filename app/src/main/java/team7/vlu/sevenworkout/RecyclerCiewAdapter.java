@@ -2,15 +2,12 @@ package team7.vlu.sevenworkout;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -53,8 +50,25 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
         holder.imgBanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, ListPractice.class);
+                final Intent intent;
+                switch (holder.getAdapterPosition()){
+                    case 0:
+                        intent =  new Intent(mContext, beginnerActivity.class);
+                        break;
+
+                    case 1:
+                        intent =  new Intent(mContext, intermediateActivity.class);
+                        break;
+                    case 2:
+                        intent =  new Intent(mContext, AdvancedActivity.class);
+                        break;
+                    default:
+                        intent =  new Intent(mContext, MainActivity.class);
+                        break;
+                }
                 mContext.startActivity(intent);
+
+                
 
             }
         });
