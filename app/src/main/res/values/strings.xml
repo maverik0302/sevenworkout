@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Seven Workout</string>
+    <string name="bt1">Dumbbell Rear Lateral Raise</string>
+    <string name="bt2">Cat And Cows</string>
+    <string name="bt3">Mountain Climbing</string>
+    <string name="bt4">Squat To Upright Row</string>
+    <string name="bt5">Toe Touch</string>
+    <string name="bt6">High Knees</string>
+    <string name="bt7">Bird Dog</string>
+    <string name="bt8">Superman</string>
+    <string name="bt9">Push Up</string>
+    <!--<string name="bt10"></string>-->
+    <string name="bt11">Hand and Foot Touch</string>
+    <string name="bt12">Jumping Jack</string>
+    <string name="bt13">Bicycle</string>
+    <string name="bt14">Double Crunch</string>
+    <string name="bt15">Crunch</string>
+    <string name="bt16">Deadbug</string>
+    <string name="bt17">Bridge</string>
+    <string name="bt18">Reversed Crunch</string>
+    <string name="bt19">Bicycle Crunch</string>
+    <string name="bt20">Star Toe Touch</string>
+    <string name="bt21"></string>
+    <string name="bt22">Stationary Lunge</string>
+    <string name="bt23">Flutter Lunge</string>
+    <string name="bt24">Burpee</string>
+    <string name="bt25">Side Lunge Touch</string>
+    <string name="bt26">Bench Dips</string>
+    <string name="bt27">Step Ups</string>
+    <string name="bt28">Pull Up</string>
+    <!--<string name="bt29"></string>-->
+    <!-- Fragment-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="beginner_type">Beginner</string>
+    <string name="intermediate_type">Intermediate</string>
+    <string name="advanced_type">Advanced</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--navigation-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
