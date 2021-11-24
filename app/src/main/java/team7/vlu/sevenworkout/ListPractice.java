@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ListPractice extends AppCompatActivity {
     ListView listView;
@@ -62,7 +61,7 @@ public class ListPractice extends AppCompatActivity {
         int rImgs[];
 
         MyAdapter (Context c, String title[], String description[], int imgs[]) {
-            super(c, R.layout.item_beginner, R.id.textView1, title);
+            super(c, R.layout.item_practice, R.id.textView1, title);
             this.context = c;
             this.rTitle = title;
             this.rDescription = description;
@@ -74,7 +73,7 @@ public class ListPractice extends AppCompatActivity {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = layoutInflater.inflate(R.layout.item_beginner, parent, false);
+            View row = layoutInflater.inflate(R.layout.item_practice, parent, false);
             ImageView images = row.findViewById(R.id.image);
             TextView myTitle = row.findViewById(R.id.textView1);
             TextView myDescription = row.findViewById(R.id.textView2);
