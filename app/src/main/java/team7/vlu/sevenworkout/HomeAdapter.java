@@ -52,7 +52,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
                 final Intent intent;
                 switch (holder.getAdapterPosition()){
                     case 0:
-                        intent =  new Intent(mContext, beginnerActivity.class);
+                        intent =  new Intent(mContext, DetailActivity.class);
                         break;
 
                     case 1:
