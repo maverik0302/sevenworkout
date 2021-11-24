@@ -30,6 +30,11 @@
             android:textStyle="bold"
             android:textSize="24sp">
         </TextView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START YOUR DAY">
+        </Button>
     </LinearLayout>
 
 
@@ -42,5 +47,5 @@
     </androidx.recyclerview.widget.RecyclerView>
 
 
-    </LinearLayout>
+</LinearLayout>
 
