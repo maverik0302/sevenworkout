@@ -1,21 +1,18 @@
 package team7.vlu.sevenworkout.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 
 import com.google.android.material.tabs.TabLayout;
 
-import team7.vlu.sevenworkout.AdvanceFragement;
+import team7.vlu.sevenworkout.ReminderFragement;
 import team7.vlu.sevenworkout.HomeFragement;
 import team7.vlu.sevenworkout.StatisticFragement;
 import team7.vlu.sevenworkout.R;
 import team7.vlu.sevenworkout.ViewPaperAdapter;
-import team7.vlu.sevenworkout.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager mViewpaper;
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mVadapter.AddFragment(new HomeFragement(), "Home");
         mVadapter.AddFragment(new StatisticFragement(), "Statistics");
-        mVadapter.AddFragment(new AdvanceFragement(), "Reminder");
+        mVadapter.AddFragment(new ReminderFragement(), "Reminder");
         mViewpaper.setAdapter(mVadapter);
         tabLayout.setupWithViewPager(mViewpaper);
 
