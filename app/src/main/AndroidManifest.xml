@@ -22,6 +22,9 @@
         <activity
             android:name=".beginnerActivity"
             android:exported="true" />
+        <activity android:name=".EventEditActivity"></activity>
+        <activity android:name=".WeekViewActivity"></activity>
+        <activity android:name=".ReportActivity"></activity>
         <!-- Turn off action bar -->
         <activity android:name=".ui.MainActivity" />
         <activity
