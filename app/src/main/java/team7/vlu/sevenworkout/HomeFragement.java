@@ -1,6 +1,5 @@
 package team7.vlu.sevenworkout;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -62,7 +61,7 @@ public class HomeFragement extends Fragment {
         lstType = new ArrayList<>();
         lstType.add(new Type("Beginner", R.drawable.beginner));
         lstType.add(new Type("Intermediate", R.drawable.intermediate));
-        lstType.add(new Type("Advanced", R.drawable.advanced        ));
+        lstType.add(new Type("Advanced", R.drawable.advanced));
 
 
     }
@@ -73,7 +72,7 @@ public class HomeFragement extends Fragment {
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragement_home, container, false);
         mRecyclerview = (RecyclerView) mView.findViewById(R.id.rcv_view);
-        RecyclerCiewAdapter recyclerCiewAdapter = new RecyclerCiewAdapter(getContext(), lstType);
+        HomeAdapter recyclerCiewAdapter = new HomeAdapter(getContext(), lstType);
         mRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerview.setAdapter(recyclerCiewAdapter);
         return mView;

@@ -19,9 +19,7 @@
         <activity
             android:name=".beginnerActivity"
             android:exported="true" />
-        <activity
-            android:name=".ListPractice"
-            android:exported="true" /> <!-- Turn off action bar -->
+        <!-- Turn off action bar -->
         <activity android:name=".ui.MainActivity" />
         <activity
             android:name=".Splashscreen"

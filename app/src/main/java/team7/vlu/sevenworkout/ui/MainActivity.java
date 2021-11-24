@@ -10,7 +10,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import team7.vlu.sevenworkout.ReminderFragement;
 import team7.vlu.sevenworkout.HomeFragement;
-import team7.vlu.sevenworkout.StatisticFragement;
+import team7.vlu.sevenworkout.WeeklyFragement;
 import team7.vlu.sevenworkout.R;
 import team7.vlu.sevenworkout.ViewPaperAdapter;
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
 
         mVadapter.AddFragment(new HomeFragement(), "Home");
-        mVadapter.AddFragment(new StatisticFragement(), "Statistics");
+        mVadapter.AddFragment(new WeeklyFragement(), "Weekly");
         mVadapter.AddFragment(new ReminderFragement(), "Reminder");
         mViewpaper.setAdapter(mVadapter);
         tabLayout.setupWithViewPager(mViewpaper);

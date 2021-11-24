@@ -17,11 +17,11 @@ import java.util.List;
 
 import team7.vlu.sevenworkout.ui.MainActivity;
 
-public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapter.MyViewHolder> {
-    private Context mContext;
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
+    private final Context mContext;
     private List<Type> mData;
 
-    public RecyclerCiewAdapter(Context mContext, List<Type> mData) {
+    public HomeAdapter(Context mContext, List<Type> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -36,7 +36,6 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         //
         final Type type = mData.get(position);
         if(type == null){
@@ -67,9 +66,6 @@ public class RecyclerCiewAdapter extends RecyclerView.Adapter<RecyclerCiewAdapte
                         break;
                 }
                 mContext.startActivity(intent);
-
-                
-
             }
         });
     }
