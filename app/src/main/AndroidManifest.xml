@@ -11,6 +11,9 @@
         android:theme="@style/Theme.SevenWorkout"
         android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
         <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".AdvancedActivity"
             android:exported="true" />
         <activity
