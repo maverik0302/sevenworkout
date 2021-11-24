@@ -20,6 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class beginnerActivity extends AppCompatActivity {
+    int alo = 5;
     ListView listView;
         String mTitleB[] = {"Toe Touch", "High Knees", "Hand & Foot Touch", "Jumping Jack", "Stationary Lunge", "Burpee", "Side Lunge Touch", "Step Ups"};
     String mDescriptionB[] = {"20s", "20s", "15s", "30s", "25s", "20s", "25s", "30s"};
