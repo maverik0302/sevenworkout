@@ -22,9 +22,9 @@
         <activity
             android:name=".beginnerActivity"
             android:exported="true" />
-        <activity android:name=".EventEditActivity"></activity>
-        <activity android:name=".WeekViewActivity"></activity>
-        <activity android:name=".ReportActivity"></activity>
+        <activity android:name=".EventEditActivity"/>
+        <activity android:name=".WeekViewActivity"/>
+        <activity android:name=".ReportActivity"/>
         <!-- Turn off action bar -->
         <activity android:name=".ui.MainActivity" />
         <activity
@@ -41,6 +41,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <receiver android:name=".AlarmReceiver"/>
+        <service android:name=".Ringtone"
+            android:enabled="true">
+        </service>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package team7.vlu.sevenworkout.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.AlarmManager;
 import android.os.Bundle;
 
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewpaper;
     private ViewPaperAdapter mVadapter;
     private TabLayout tabLayout;
+    private AlarmManager alarmManager;
 
     //toolbarDraw
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         mViewpaper = (ViewPager) findViewById(R.id.view_paper);
         mVadapter = new ViewPaperAdapter(getSupportFragmentManager());
