@@ -1,63 +1,143 @@
 package team7.vlu.sevenworkout;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ReminderFragement#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.Calendar;
+import java.util.Date;
+
+import team7.vlu.sevenworkout.databinding.FragmentReminderBinding;
+
 public class ReminderFragement extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private ReminderViewModel reminderViewModel;
+    private TextView textTime1, textTime2;
+    private SwitchCompat iSwitch1, iSwitch2;
+    private TimePickerDialog.OnTimeSetListener timeSetListener;
+    private FragmentReminderBinding binding;
+    private AlarmManager alarmManager;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public ReminderFragement() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BeginnerFragement.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ReminderFragement newInstance(String param1, String param2) {
-        ReminderFragement fragment = new ReminderFragement();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    public static final String MY_PREPS = "preps";
+    public static final String TEXT = "text";
+    public String textPrep;
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        reminderViewModel = new ViewModelProvider(this).get(ReminderViewModel.class);
+
+        binding = FragmentReminderBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        textTime1 = (TextView) root.findViewById(R.id.texttimereimnider);
+        iSwitch1 = (SwitchCompat) root.findViewById(R.id.switch_alarm1);
+
+        SharedPreferences settings = root.getContext().getSharedPreferences(MY_PREPS, 0);
+        boolean switchStatus = settings.getBoolean("switchkey", false);
+
+        iSwitch1.setChecked(switchStatus);
+
+
+        alarmManager = (AlarmManager) root.getContext().getSystemService(Context.ALARM_SERVICE);
+
+
+
+        iSwitch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)  {
+                    Calendar calendar = Calendar.getInstance();
+                    int hour = calendar.get(Calendar.HOUR_OF_DAY);
+                    int minute = calendar.get(Calendar.MINUTE);
+
+                    TimePickerDialog dialog = new TimePickerDialog(root.getContext(),
+                            timeSetListener, hour, minute, DateFormat.is24HourFormat(root.getContext()));
+                    dialog.show();
+                    startAlarm(calendar);
+
+                    //saveData
+
+                } else {
+                    cancelAlarm();
+
+
+                }
+                SharedPreferences settings = root.getContext().getSharedPreferences(MY_PREPS, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(TEXT, textTime1.getText().toString());
+                editor.putBoolean("switchkey", isChecked);
+                editor.commit();
+                //shared Preferences
+
+                
+            }
+
+            private void updateView() {
+            }
+
+            private void startAlarm(Calendar calendar) {
+                AlarmManager alarmManager = (AlarmManager) root.getContext().getSystemService(Context.ALARM_SERVICE);
+                Intent intent = new Intent(root.getContext(), AlarmReceiver.class);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(root.getContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+            }
+
+            private void cancelAlarm() {
+                AlarmManager alarmManager = (AlarmManager) root.getContext().getSystemService(Context.ALARM_SERVICE);
+                Intent intent = new Intent(root.getContext(), AlarmReceiver.class);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(root.getContext(), 1, intent, 0);
+                alarmManager.cancel(pendingIntent);
+
+            }
+        });
+
+
+        timeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+                String am_pm = (hourOfDay < 12) ? "AM" : "PM";
+                String timeText = hourOfDay + ":" + minute + " " + am_pm;
+                textTime1.setText(timeText);
+
+
+
+                updateView();
+
+
+
+            }
+
+            private void updateView() {
+                SharedPreferences settings = root.getContext().getSharedPreferences("PREFS", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(TEXT, textTime1.getText().toString());
+                editor.commit();
+            }
+
+
+        };
+        return root;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reminder, container, false);
-    }
+
 }
