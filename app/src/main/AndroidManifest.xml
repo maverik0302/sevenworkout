@@ -15,12 +15,15 @@
             android:exported="true" />
         <activity
             android:name=".AdvancedActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".intermediateActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".beginnerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" />
         <activity android:name=".EventEditActivity"/>
         <activity android:name=".WeekViewActivity"/>

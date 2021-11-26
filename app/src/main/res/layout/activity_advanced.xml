@@ -5,5 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdvancedActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        app:title="@string/advanced_type"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Imperial_Red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

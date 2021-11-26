@@ -1,12 +1,17 @@
 package team7.vlu.sevenworkout;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +23,8 @@ public class beginnerActivity extends AppCompatActivity {
     private RecyclerView rcvData;
     private BeginnerAdapter beginnerAdapter;
 
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +33,7 @@ public class beginnerActivity extends AppCompatActivity {
         rcvData = findViewById(R.id.rcv_data);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvData.setLayoutManager(linearLayoutManager);
+
 
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this , DividerItemDecoration.VERTICAL);
         rcvData.addItemDecoration(itemDecoration);
@@ -51,6 +59,9 @@ public class beginnerActivity extends AppCompatActivity {
         list.add(new Exercise(R.drawable.ex_25, "Side Lunge Touch", "30s"));
         list.add(new Exercise(R.drawable.ex_27, "Step Ups", "30s"));
         return  list;
+
+
+        //Navigation bar
     }
     @Override
     protected void onDestroy() {
