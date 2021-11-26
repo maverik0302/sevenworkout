@@ -1,24 +1,12 @@
 package team7.vlu.sevenworkout;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +16,7 @@ import team7.vlu.sevenworkout.phong_interface.IClickItemUserListener;
 public class beginnerActivity extends AppCompatActivity {
 
     private RecyclerView rcvData;
-    private UserAdapter userAdapter;
+    private BeginnerAdapter beginnerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +30,13 @@ public class beginnerActivity extends AppCompatActivity {
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this , DividerItemDecoration.VERTICAL);
         rcvData.addItemDecoration(itemDecoration);
 
-        userAdapter = new UserAdapter(getListUser(), new IClickItemUserListener() {
+        beginnerAdapter = new BeginnerAdapter(getListUser(), new IClickItemUserListener() {
             @Override
             public void onClickItemUser(User user) {
                 onClickGoToDetail(user);
             }
         });
-        rcvData.setAdapter(userAdapter);
+        rcvData.setAdapter(beginnerAdapter);
 
     }
 

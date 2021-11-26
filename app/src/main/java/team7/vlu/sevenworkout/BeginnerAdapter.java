@@ -14,12 +14,12 @@ import java.util.List;
 
 import team7.vlu.sevenworkout.phong_interface.IClickItemUserListener;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
+public class BeginnerAdapter extends RecyclerView.Adapter<BeginnerAdapter.BeginnerViewHolder> {
 
     private List<User> mlistUser;
     private IClickItemUserListener iClickItemUserListener;
 
-    public UserAdapter(List<User> mlistUser, IClickItemUserListener listener) {
+    public BeginnerAdapter(List<User> mlistUser, IClickItemUserListener listener) {
 
         this.mlistUser = mlistUser;
         this.iClickItemUserListener = listener;
@@ -27,13 +27,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BeginnerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_practice, parent, false);
-        return new UserViewHolder(view);
+        return new BeginnerViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BeginnerViewHolder holder, int position) {
         User user = mlistUser.get(position);
         if (user == null) {
             return;
@@ -57,13 +57,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         return 0;
     }
 
-    public class UserViewHolder extends RecyclerView.ViewHolder {
+    public class BeginnerViewHolder extends RecyclerView.ViewHolder {
 
         private RelativeLayout layoutItem;
         private ImageView imgAvatar;
         private TextView txt_name, txt_address;
 
-        public UserViewHolder(@NonNull View itemView) {
+        public BeginnerViewHolder(@NonNull View itemView) {
             super(itemView);
             layoutItem = itemView.findViewById(R.id.item_pt);
             imgAvatar = itemView.findViewById(R.id.imgBeginnerList);
