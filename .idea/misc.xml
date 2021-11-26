@@ -17,6 +17,9 @@
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-xhdpi/side_nav_bar.xml" value="0.13385416666666666" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/font/sura.xml" value="0.14791666666666667" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.18" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.13183060109289618" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_about_infomation.xml" value="0.2" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_advanced.xml" value="0.11770833333333333" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_apple.xml" value="0.1078125" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_beginner.xml" value="0.13" />
@@ -37,6 +40,7 @@
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/calendar_cell.xml" value="0.18931159420289856" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/contain_main.xml" value="0.22962962962962963" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/content_scrolling.xml" value="0.25" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/dialog_info.xml" value="0.22" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/event_cell.xml" value="0.18931159420289856" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/fragement_home.xml" value="0.1125" />

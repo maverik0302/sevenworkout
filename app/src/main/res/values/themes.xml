@@ -13,14 +13,27 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="roundimageview" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">30dp</item>
         <item name="color">@color/white</item>
     </style>
+
     <style name="Theme.Demo_navigation.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Theme.Demo_navigation.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" />
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.SevenWorkout.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SevenWorkout.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SevenWorkout.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

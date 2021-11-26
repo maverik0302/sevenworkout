@@ -22,4 +22,10 @@
             android:title="BMI">
         </item>
     </group>
+    <group>
+        <item android:id="@+id/item_info"
+            android:icon="@drawable/ic_info"
+            android:title="About">
+        </item>
+    </group>
 </menu>

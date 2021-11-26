@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="team7.vlu.sevenworkout" >
+    package="team7.vlu.sevenworkout">
 
     <application
         android:allowBackup="true"
@@ -9,32 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SevenWorkout"
-        android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
+        android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
+        <activity
+            android:name=".AboutInfomation"
+            android:exported="true"
+            android:label="@string/title_activity_about_infomation"
+            android:theme="@style/Theme.SevenWorkout.NoActionBar" />
         <activity
             android:name=".DetailActivity"
             android:exported="true" />
         <activity
             android:name=".AdvancedActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".intermediateActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".beginnerActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".EventEditActivity"/>
-        <activity android:name=".WeekViewActivity"/>
-        <activity android:name=".ReportActivity"/>
-        <!-- Turn off action bar -->
-        <activity android:name=".ui.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EventEditActivity" />
+        <activity android:name=".WeekViewActivity" />
+        <activity android:name=".ReportActivity" /> <!-- Turn off action bar -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar" >
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,10 +50,12 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <receiver android:name=".AlarmReceiver"/>
-        <service android:name=".Ringtone"
-            android:enabled="true">
-        </service>
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <service
+            android:name=".Ringtone"
+            android:enabled="true"></service>
     </application>
 
 </manifest>
