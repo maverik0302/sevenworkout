@@ -26,7 +26,8 @@
         <activity android:name=".WeekViewActivity"/>
         <activity android:name=".ReportActivity"/>
         <!-- Turn off action bar -->
-        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Splashscreen"
             android:exported="true"
