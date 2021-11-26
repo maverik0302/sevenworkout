@@ -16,12 +16,12 @@ import team7.vlu.sevenworkout.phong_interface.IClickItemUserListener;
 
 public class BeginnerAdapter extends RecyclerView.Adapter<BeginnerAdapter.BeginnerViewHolder> {
 
-    private List<User> mlistUser;
+    private List<Exercise> mlistExercise;
     private IClickItemUserListener iClickItemUserListener;
 
-    public BeginnerAdapter(List<User> mlistUser, IClickItemUserListener listener) {
+    public BeginnerAdapter(List<Exercise> mlistExercise, IClickItemUserListener listener) {
 
-        this.mlistUser = mlistUser;
+        this.mlistExercise = mlistExercise;
         this.iClickItemUserListener = listener;
     }
 
@@ -34,25 +34,25 @@ public class BeginnerAdapter extends RecyclerView.Adapter<BeginnerAdapter.Beginn
 
     @Override
     public void onBindViewHolder(@NonNull BeginnerViewHolder holder, int position) {
-        User user = mlistUser.get(position);
-        if (user == null) {
+        Exercise exercise = mlistExercise.get(position);
+        if (exercise == null) {
             return;
         }
-        holder.imgAvatar.setImageResource(user.getResourceId());
-        holder.txt_name.setText(user.getName());
-        holder.txt_address.setText(user.getAddress());
+        holder.imgAvatar.setImageResource(exercise.getResourceId());
+        holder.txt_name.setText(exercise.getName());
+        holder.txt_address.setText(exercise.getAddress());
         holder.layoutItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                iClickItemUserListener.onClickItemUser(user);
+                iClickItemUserListener.onClickItemUser(exercise);
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        if (mlistUser != null) {
-            return mlistUser.size();
+        if (mlistExercise != null) {
+            return mlistExercise.size();
         }
         return 0;
     }

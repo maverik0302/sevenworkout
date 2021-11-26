@@ -16,8 +16,8 @@ public class DetailActivity extends AppCompatActivity {
         if(bundle == null){
             return;
         }
-        User user = (User) bundle.get("object_user");
+        Exercise exercise = (Exercise) bundle.get("object_user");
         TextView tvNameUser = findViewById(R.id.tv_name_user);
-        tvNameUser.setText(user.getName());
+        tvNameUser.setText(exercise.getName());
     }
 }

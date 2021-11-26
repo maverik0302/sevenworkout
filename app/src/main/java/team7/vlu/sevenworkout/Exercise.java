@@ -2,13 +2,13 @@ package team7.vlu.sevenworkout;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class Exercise implements Serializable {
 
     private int resourceId;
     private String name;
     private String address;
 
-    public User(int resourceId, String name, String address) {
+    public Exercise(int resourceId, String name, String address) {
         this.resourceId = resourceId;
         this.name = name;
         this.address = address;

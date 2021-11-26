@@ -32,34 +32,34 @@ public class beginnerActivity extends AppCompatActivity {
 
         beginnerAdapter = new BeginnerAdapter(getListUser(), new IClickItemUserListener() {
             @Override
-            public void onClickItemUser(User user) {
-                onClickGoToDetail(user);
+            public void onClickItemUser(Exercise exercise) {
+                onClickGoToDetail(exercise);
             }
         });
         rcvData.setAdapter(beginnerAdapter);
 
     }
 
-    private List<User> getListUser() {
-        List<User> list = new ArrayList<>();
-        list.add(new User(R.drawable.ex_5, "Toe Touch", "30s"));
-        list.add(new User(R.drawable.ex_6, "High Knees", "30s"));
-        list.add(new User(R.drawable.ex_11, "Hand & Foot Touch", "30s"));
-        list.add(new User(R.drawable.ex_12, "Jumping Jack", "30s"));
-        list.add(new User(R.drawable.ex_22, "Stationary Lunge", "30s"));
-        list.add(new User(R.drawable.ex_24, "Burpee", "30s"));
-        list.add(new User(R.drawable.ex_25, "Side Lunge Touch", "30s"));
-        list.add(new User(R.drawable.ex_27, "Step Ups", "30s"));
+    private List<Exercise> getListUser() {
+        List<Exercise> list = new ArrayList<>();
+        list.add(new Exercise(R.drawable.ex_5, "Toe Touch", "30s"));
+        list.add(new Exercise(R.drawable.ex_6, "High Knees", "30s"));
+        list.add(new Exercise(R.drawable.ex_11, "Hand & Foot Touch", "30s"));
+        list.add(new Exercise(R.drawable.ex_12, "Jumping Jack", "30s"));
+        list.add(new Exercise(R.drawable.ex_22, "Stationary Lunge", "30s"));
+        list.add(new Exercise(R.drawable.ex_24, "Burpee", "30s"));
+        list.add(new Exercise(R.drawable.ex_25, "Side Lunge Touch", "30s"));
+        list.add(new Exercise(R.drawable.ex_27, "Step Ups", "30s"));
         return  list;
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
-    private void onClickGoToDetail(User user) {
+    private void onClickGoToDetail(Exercise exercise) {
         Intent intent = new Intent(this, DetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("object_user", user);
+        bundle.putSerializable("object_user", exercise);
         intent.putExtras(bundle);
         startActivity(intent);
     }
