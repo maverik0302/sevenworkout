@@ -21,6 +21,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import team7.vlu.sevenworkout.AboutInfomation;
+import team7.vlu.sevenworkout.BmiCalculator;
 import team7.vlu.sevenworkout.ReminderFragement;
 import team7.vlu.sevenworkout.HomeFragement;
 import team7.vlu.sevenworkout.ReportActivity;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                         return true;
                     case R.id.item_bmi:
-                        Intent intent2 = new Intent(MainActivity.this, AboutInfomation.class);
+                        Intent intent2 = new Intent(MainActivity.this, BmiCalculator.class);
                         startActivity(intent2);
 
                 }

@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +38,8 @@ public class ReminderFragement extends Fragment {
     private TimePickerDialog.OnTimeSetListener timeSetListener;
     private FragmentReminderBinding binding;
     private AlarmManager alarmManager;
+    private DBcontext db;
+    private String tmp;
 
     public static final String MY_PREPS = "preps";
     public static final String TEXT = "text";
@@ -48,8 +52,26 @@ public class ReminderFragement extends Fragment {
         binding = FragmentReminderBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        try {
+            db = new DBcontext(root.getContext());
+            db.open();
+        }
+        catch (Exception ex){
+            Log.d(ex.getMessage(), "onCreate: ");
+        }
+
+        //get value
+
+
+
         textTime1 = (TextView) root.findViewById(R.id.texttimereimnider);
         iSwitch1 = (SwitchCompat) root.findViewById(R.id.switch_alarm1);
+
+        //bundle
+        Bundle extras = getActivity().getIntent().getExtras();
+        if (extras != null){
+
+        }
 
         SharedPreferences settings = root.getContext().getSharedPreferences(MY_PREPS, 0);
         boolean switchStatus = settings.getBoolean("switchkey", false);
@@ -73,6 +95,7 @@ public class ReminderFragement extends Fragment {
                             timeSetListener, hour, minute, DateFormat.is24HourFormat(root.getContext()));
                     dialog.show();
                     startAlarm(calendar);
+                    //showDataOnText();
 
                     //saveData
 
@@ -90,6 +113,10 @@ public class ReminderFragement extends Fragment {
 
                 
             }
+
+           /* private void showDataOnText() {
+                String
+            }*/
 
             private void updateView() {
             }
@@ -121,20 +148,42 @@ public class ReminderFragement extends Fragment {
 
 
 
-                updateView();
+
+
+
+                saveTime();
+
+
+
+
+                //updateView();
 
 
 
             }
 
-            private void updateView() {
-                SharedPreferences settings = root.getContext().getSharedPreferences("PREFS", 0);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putString(TEXT, textTime1.getText().toString());
-                editor.commit();
+            private void saveTime() {
+
+                db.insert(textTime1.getText().toString());
+                Toast.makeText(root.getContext(), "Set reminder succesfully", Toast.LENGTH_SHORT).show();
             }
 
-
+            /*private void updateView() {
+                String id = "";
+                String textTime = "";
+                String row = "";
+                Cursor cursor = db.selectAll();
+                if (cursor != null){
+                    if(cursor.moveToFirst()){
+                        do{
+                            id = cursor.getString(0);
+                            textTime = cursor.getString(1);
+                            row += textTime;
+                        }while (cursor.moveToNext());
+                        textTime1.setText(row);
+                    }
+                }
+            }*/
         };
         return root;
     }

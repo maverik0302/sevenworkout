@@ -13,10 +13,17 @@
         <entry key="..\:/File Android Studio/sevenworkout/app/src/main/res/layout/item_type.xml" value="0.36666666666666664" />
         <entry key="..\:/File Android Studio/sevenworkout/app/src/main/res/layout/nav_header.xml" value="0.36666666666666664" />
         <entry key="..\:/File Android Studio/sevenworkout/app/src/main/res/menu/drawer_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-anydpi/buttonbackground.xml" value="0.1" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-anydpi/cardbackgroung.xml" value="0.21197916666666666" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-anydpi/malefemalefocus.xml" value="0.21197916666666666" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-anydpi/malefemalenotfocus.xml" value="0.21197916666666666" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-anydpi/plusminus.xml" value="0.1" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21614583333333334" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable-xhdpi/side_nav_bar.xml" value="0.13385416666666666" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable/edit_bg.xml" value="0.21614583333333334" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/font/sura.xml" value="0.14791666666666667" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout-w1240dp/activity_bmi_notification.xml" value="0.1" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.18" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.13183060109289618" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_about_infomation.xml" value="0.2" />
@@ -25,6 +32,9 @@
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_beginner.xml" value="0.13" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_beginnerActivity.xml" value="0.11770833333333333" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_beginner_list.xml" value="0.1125" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_bmi_calculator.xml" value="0.22" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_bmi_noti.xml" value="0.1" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_bmi_notification.xml" value="0.1" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_detail.xml" value="0.18931159420289856" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_event_edit.xml" value="0.22" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/activity_intermediate.xml" value="0.22" />
@@ -56,7 +66,7 @@
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_beginner.xml" value="0.1" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_days.xml" value="0.33" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_even.xml" value="0.1" />
-        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_practice.xml" value="0.1" />
+        <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_practice.xml" value="0.18" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/item_type.xml" value="0.25" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/list_days.xml" value="0.18" />
         <entry key="..\:/TEAM7_DATA/SevenWorkout/app/src/main/res/layout/nav_header.xml" value="0.16" />

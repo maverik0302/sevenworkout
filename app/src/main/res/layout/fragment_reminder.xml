@@ -41,14 +41,30 @@
                 android:textColor="@color/Celadon_Blue"
                 android:id="@+id/texttimereimnider">
             </TextView>
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_alarm1"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="25dp"
-                    tools:ignore="UseSwitchCompatOrMaterialXml">
-                </androidx.appcompat.widget.SwitchCompat>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_alarm1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="25dp"
+                        tools:ignore="UseSwitchCompatOrMaterialXml">
+                    </androidx.appcompat.widget.SwitchCompat>
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SET REMINDER"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="25dp"
+                        android:textColor="@color/Honeydew"
+                        android:backgroundTint="@color/Celadon_Blue"/>
+                </LinearLayout>
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
