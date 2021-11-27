@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.item_plan:
                         onBackPressed();
                         return true;
-                    case R.id.item_discover:
+
                     case R.id.item_report:
                         Intent intent1 = new Intent(MainActivity.this, ReportActivity.class);
                         startActivity(intent1);
@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.item_bmi:
                         Intent intent2 = new Intent(MainActivity.this, BmiCalculator.class);
                         startActivity(intent2);
+                    case R.id.item_info:
+                        Intent intent3 = new Intent(MainActivity.this, AboutInfomation.class);
+                        startActivity(intent3);
 
                 }
                 return false;

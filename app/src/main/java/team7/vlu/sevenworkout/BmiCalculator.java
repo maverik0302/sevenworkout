@@ -176,4 +176,9 @@ public class BmiCalculator extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
