@@ -20,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
         }
         User user = (User) bundle.get("object_user");
         TextView tvNameUser = findViewById(R.id.tv_name_user);
+        //Chỗ sửa
         GifImageView gifImageView = findViewById(R.id.img_gif);
         gifImageView.setImageResource(user.getResourceId());
         tvNameUser.setText(user.getName());
