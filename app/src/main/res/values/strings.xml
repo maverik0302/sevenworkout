@@ -62,4 +62,20 @@
     <string name="calculate_your_bmi">Calculate Your BMI</string>
     <string name="weight">Weight</string>
     <string name="male">Male</string>
+    
+    <string-array name="discover">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="description">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="team7.vlu.sevenworkout" >
+    package="team7.vlu.sevenworkout">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SevenWorkout"
-        android:windowSoftInputMode="adjustResize|stateAlwaysVisible" >
+        android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
+        <activity
+            android:name=".Discover"
+            android:exported="false" />
         <activity
             android:name=".BmiNoti"
             android:exported="true" />
@@ -47,7 +50,7 @@
         <activity
             android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar" >
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
