@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "584975201600",
-    "firebase_url": "https://userinformation-94e24-default-rtdb.firebaseio.com",
-    "project_id": "userinformation-94e24",
-    "storage_bucket": "userinformation-94e24.appspot.com"
+    "project_number": "995761533775",
+    "firebase_url": "https://seven-workout-default-rtdb.firebaseio.com",
+    "project_id": "seven-workout",
+    "storage_bucket": "seven-workout.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:584975201600:android:94a792d74b59998bd4b6a5",
+        "mobilesdk_app_id": "1:995761533775:android:01aea04e07b4c8d4d64b3a",
         "android_client_info": {
-          "package_name": "team7.vlu.firebasewithrecycleview"
+          "package_name": "team7.vlu.sevenworkout"
         }
       },
       "oauth_client": [
         {
-          "client_id": "584975201600-i5tmo5cf87g5fv9r0jep4j3rl1hgjh3d.apps.googleusercontent.com",
+          "client_id": "995761533775-amv67lk2ql62o8ufau4fhktkd57pcns7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDXg1mTcEUPl3Res7h18CZ7uDiNZguxYvw"
+          "current_key": "AIzaSyB4hmReXdSj9HXiacvJSxkm3Dx5L1DMd5A"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "584975201600-i5tmo5cf87g5fv9r0jep4j3rl1hgjh3d.apps.googleusercontent.com",
+              "client_id": "995761533775-amv67lk2ql62o8ufau4fhktkd57pcns7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
