@@ -9,23 +9,25 @@
             android:icon="@drawable/ic_fintness"
             android:title="Training plans">
         </item>
-        <item android:id="@+id/item_discover"
+
+        <item android:id="@+id/item_discover_menu"
             android:icon="@drawable/ic_news"
             android:title="Discover">
         </item>
+
         <item android:id="@+id/item_report"
             android:icon="@drawable/ic_report"
             android:title="Report">
         </item>
+
         <item android:id="@+id/item_bmi"
             android:icon="@drawable/ic_bmi"
             android:title="BMI">
         </item>
-    </group>
-    <group>
+
         <item android:id="@+id/item_info"
-            android:icon="@drawable/ic_info"
-            android:title="About">
+        android:icon="@drawable/ic_info"
+        android:title="About">
         </item>
     </group>
 </menu>

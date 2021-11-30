@@ -6,29 +6,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.AlarmManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import team7.vlu.sevenworkout.AboutInfomation;
 import team7.vlu.sevenworkout.BmiCalculator;
+import team7.vlu.sevenworkout.Discover;
 import team7.vlu.sevenworkout.ReminderFragement;
 import team7.vlu.sevenworkout.HomeFragement;
 import team7.vlu.sevenworkout.ReportActivity;
 import team7.vlu.sevenworkout.WeeklyFragement;
 import team7.vlu.sevenworkout.R;
 import team7.vlu.sevenworkout.ViewPaperAdapter;
-import team7.vlu.sevenworkout.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager mViewpaper;
@@ -72,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
         //Click Optionmenu
+        Context context;
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -80,18 +79,24 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.item_plan:
                         onBackPressed();
-                        return true;
+                        break;
+                    case R.id.item_discover_menu:
+                        Intent intent1 = new Intent(MainActivity.this, Discover.class);
+                        startActivity(intent1);
+                        return  true;
 
                     case R.id.item_report:
-                        Intent intent1 = new Intent(MainActivity.this, ReportActivity.class);
-                        startActivity(intent1);
+                        Intent intent2 = new Intent(MainActivity.this, ReportActivity.class);
+                        startActivity(intent2);
                         return true;
                     case R.id.item_bmi:
-                        Intent intent2 = new Intent(MainActivity.this, BmiCalculator.class);
-                        startActivity(intent2);
-                    case R.id.item_info:
-                        Intent intent3 = new Intent(MainActivity.this, AboutInfomation.class);
+                        Intent intent3 = new Intent(MainActivity.this, BmiCalculator.class);
                         startActivity(intent3);
+                        return true;
+                    case R.id.item_info:
+                        Intent intent4 = new Intent(MainActivity.this, AboutInfomation.class);
+                        startActivity(intent4);
+                        return true;
 
                 }
                 return false;

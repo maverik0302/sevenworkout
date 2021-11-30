@@ -115,9 +115,8 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (backgroudMusic.isPlaying()){
+        if (backgroudMusic.isPlaying() == true){
             backgroudMusic.stop();
-
         }
         super.onBackPressed();
     }
