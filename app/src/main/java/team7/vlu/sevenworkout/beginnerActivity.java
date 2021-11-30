@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -18,17 +21,20 @@ import java.util.List;
 
 import team7.vlu.sevenworkout.phong_interface.IClickItemUserListener;
 
-public class beginnerActivity extends AppCompatActivity {
+public class beginnerActivity extends AppCompatActivity{
 
     private RecyclerView rcvData;
     private BeginnerAdapter beginnerAdapter;
-
+    private EditText search;
+    private List<Exercise> list;
     
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beginner);
+
+
 
         rcvData = findViewById(R.id.rcv_data);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -48,8 +54,9 @@ public class beginnerActivity extends AppCompatActivity {
 
     }
 
+
     private List<Exercise> getListUser() {
-        List<Exercise> list = new ArrayList<>();
+        list = new ArrayList<>();
         list.add(new Exercise(R.drawable.ex_5, "Toe Touch", "30s"));
         list.add(new Exercise(R.drawable.ex_6, "High Knees", "30s"));
         list.add(new Exercise(R.drawable.ex_11, "Hand & Foot Touch", "30s"));
